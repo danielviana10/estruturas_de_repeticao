@@ -9,12 +9,15 @@ public class App {
 
     public static void main(String[] args) {
         // loop for
+        
+        // exercício para contar um número o 0 até ele mesmo
         int count = 10;
         
         for(int i = 0; i <= count; i++){
             System.out.println(i);
         }
         
+        // exercicio para registrar os nomes e idades dos alunos
         int totalAlunos = 10;
         
         Scanner leitorAlunos = new Scanner(System.in);
@@ -28,6 +31,32 @@ public class App {
             System.out.println("O nome do aluno é: " + nomeDoAluno + " e a sua idade é: " + idadeAluno);
             
             totalAlunos = totalAlunos - 1;
+        }
+        
+        // exercício para informar se o número é maior, menor ou igual a zero
+        
+        Scanner leitorScan = new Scanner(System.in);
+        
+        char continuar = 'S';
+        
+        while(continuar == 'S' || continuar == 's'){
+            
+            System.out.println("Digite um número");
+            
+            int numero = leitorScan.nextInt();
+            
+            if(numero == 0){
+                System.out.println("O número é igual a 0");
+            } else {
+                if(numero < 0){
+                    System.out.println("O número é negativo");
+                } else{
+                    System.out.println("O número é positivo");
+                }
+            }
+            
+            System.out.println("Dseja continuar? S para Sim ou N para Não");
+            continuar = leitorScan.next().charAt(0);
         }
     }
 }
